@@ -1,0 +1,1 @@
+const{contextBridge,ipcRenderer}=require("electron");contextBridge.exposeInMainWorld("desktop",{folder:()=>ipcRenderer.invoke("folder"),zip:()=>ipcRenderer.invoke("zip"),open:p=>ipcRenderer.invoke("open",p),explorer:p=>ipcRenderer.invoke("explorer",p)});
