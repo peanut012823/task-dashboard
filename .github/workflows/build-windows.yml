@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build Windows installer
-       env:
+        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run dist
 
@@ -43,4 +43,4 @@ jobs:
           files: release/*.exe
           generate_release_notes: true
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
