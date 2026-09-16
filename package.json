@@ -4,5 +4,7 @@
   "scripts":{"build":"vite build","dist":"npm run build && electron-builder"},
   "dependencies":{"react":"^19.1.1","react-dom":"^19.1.1","lucide-react":"^0.468.0"},
   "devDependencies":{"@vitejs/plugin-react":"^4.6.0","electron":"^38.1.0","electron-builder":"^26.0.12","vite":"^7.1.5"},
-  "build":{"appId":"com.taskdashboard.desktop","productName":"Task Dashboard","artifactName":"Task-Dashboard-Setup-${version}.${ext}","files":["dist/**/*","electron/**/*","package.json"],"directories":{"output":"release"},"win":{"target":[{"target":"nsis","arch":["x64"]}]},"nsis":{"oneClick":false,"allowToChangeInstallationDirectory":true,"createDesktopShortcut":true,"createStartMenuShortcut":true}}
+ "build": "vite build",
+  "start": "electron .",
+  "dist": "npm run build && electron-builder --publish onTag"
 }
